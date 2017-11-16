@@ -20,16 +20,13 @@ ref.child("Topic").update(topics);
 
 ref.child("Topic").limitToLast(1).on("child_added", function(snap){
 
-	// var index = snap.numChildren();
 	var topic = snap.val();
-	// console.log(topic)
 	$("#topic_text").text(topic);
 });
 
 ref.child("time_left").on("value",function(snap){
 	var time_left = snap.val();
-	// console.log(time_left)
-	// var time_left = 1000;
+
 	 setInterval(time_decrease, 1000);
 	 
 	 function time_decrease(){
@@ -45,9 +42,9 @@ ref.child("time_left").on("value",function(snap){
 		ref.update(time_update);
 		$("#timer_display").text("Time Left: "+time_left)
 	 }
-
-
 })
+
+
 
 // function timer(){
 	
