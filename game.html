@@ -24,70 +24,14 @@
   <!--TOPIC DISPLAY CONTAINER    -->
   <nav class="navbar background_red">
     <div class="container text-center"><a href="index.html" class="col-12 col-md-4"><i class="fa fa-home fa-2x text-white"></i></a>
-      <h2 class="col-12 col-md-4 text-white" id="topic_text">Pineapple Pizza</h2>
-      <h3 class="col-12 col-md-4 text-white" id="timer_display">12:30</h3>
+      <h2 class="col-12 col-md-4 text-white" id="topic_text"></h2>
+      <h3 class="col-12 col-md-4 text-white" id="timer_display"></h3>
     </div>
   </nav><br/>
   <!--POST-IT DISPLAY AREA-->
   <div class="container">
-    <div class="row justify-content-center">
-      <div class="postit gradient_green rotate-left">
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Culpa saepe at itaque officiis velit reiciendis? Harum eos culpa quia ipsa!</p>
-      </div>
-      <div class="postit gradient_purple">
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Culpa saepe at itaque officiis velit reiciendis? Harum eos culpa quia ipsa!</p>
-      </div>
-      <div class="postit gradient_yellow rotate-right">
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Culpa saepe at itaque officiis velit reiciendis? Harum eos culpa quia ipsa!</p>
-      </div>
-      <div class="postit gradient_orange rotate-right">
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Culpa saepe at itaque officiis velit reiciendis? Harum eos culpa quia ipsa!</p>
-      </div>
-      <div class="postit gradient_purple">
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Culpa saepe at itaque officiis velit reiciendis? Harum eos culpa quia ipsa!</p>
-      </div>
-      <div class="postit gradient_green">
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Culpa saepe at itaque officiis velit reiciendis? Harum eos culpa quia ipsa!</p>
-      </div>
-      <div class="postit gradient_purple rotate-left">
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Culpa saepe at itaque officiis velit reiciendis? Harum eos culpa quia ipsa!</p>
-      </div>
-      <div class="postit gradient_yellow">
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Culpa saepe at itaque officiis velit reiciendis? Harum eos culpa quia ipsa!</p>
-      </div>
-      <div class="postit gradient_orange">
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Culpa saepe at itaque officiis velit reiciendis? Harum eos culpa quia ipsa!</p>
-      </div>
-      <div class="postit gradient_green rotate-left">
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Culpa saepe at itaque officiis velit reiciendis? Harum eos culpa quia ipsa!     </p>
-      </div>
-      <div class="postit gradient_orange rotate-right">
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Culpa saepe at itaque officiis velit reiciendis? Harum eos culpa quia ipsa!</p>
-      </div>
-      <div class="postit gradient_purple">
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Culpa saepe at itaque officiis velit reiciendis? Harum eos culpa quia ipsa!</p>
-      </div>
-      <div class="postit gradient_yellow rotate-left">
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Culpa saepe at itaque officiis velit reiciendis? Harum eos culpa quia ipsa!</p>
-      </div>
-      <div class="postit gradient_yellow rotate-left">
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Culpa saepe at itaque officiis velit reiciendis? Harum eos culpa quia ipsa!</p>
-      </div>
-      <div class="postit gradient_green">
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Culpa saepe at itaque officiis velit reiciendis? Harum eos culpa quia ipsa!</p>
-      </div>
-      <div class="postit gradient_orange rotate-right">
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Culpa saepe at itaque officiis velit reiciendis? Harum eos culpa quia ipsa!</p>
-      </div>
-      <div class="postit gradient_purple">
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Culpa saepe at itaque officiis velit reiciendis? Harum eos culpa quia ipsa!</p>
-      </div>
-      <div class="postit gradient_yellow rotate-left">
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Culpa saepe at itaque officiis velit reiciendis? Harum eos culpa quia ipsa!</p>
-      </div>
-      <div class="postit gradient_yellow rotate-left">
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Culpa saepe at itaque officiis velit reiciendis? Harum eos culpa quia ipsa!</p>
-      </div>
+    <div class="row justify-content-center" id="post_area">
+
       <!--BUTTONS FOR SLIDE OUT COMPONENTS -->
       <!--BOTTOM BUTTON -->
       <p><a id="bottom_nav_show" class="btn btn-lg text-white background_blue left">Post-It</a></p>
@@ -129,8 +73,8 @@
       </div><br/>
       <div class="row justify-content-center">
         <div class="input-group col-8 justify-content-center">
-          <input type="text" placeholder="Text here . . ." class="form-control"/><span class="input-group-btn">
-            <button type="submit" class="btn btn-secondary">Submit</button></span>
+          <input type="text" placeholder="Text here . . ." class="form-control" id="input_text"><span class="input-group-btn">
+            <button type="submit" class="btn btn-secondary" id="submit_button">Submit</button></span>
         </div>
       </div>
     </div>
