@@ -249,6 +249,7 @@ if (index>=10 && index<100){
 ref.on("value",function(){
 	ref.child("Posts").on("value",function(snap){
 
+
 		var index = snap.numChildren();
 		var array_like = [];
 		var array_dislike = [];
@@ -286,6 +287,7 @@ ref.on("value",function(){
 
 $(document).on("click",".thumb_up", function(){
 	var id = $(this).parent().attr("id");
+	$(this).attr("disabled")
 	// console.log(id);
 	var like;	
 	ref.child("Posts").child("post"+id).on("value", function(snap){

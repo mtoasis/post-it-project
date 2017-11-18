@@ -1,3 +1,9 @@
+button{
+  cursor:pointer;
+}
+
+
+
 body {
   background-color: #ffcdd2; }
 
@@ -78,7 +84,6 @@ body {
 
 .postit {
   font-family: 'Amatic SC', sans-serif;
-  font-weight: bold;
   line-height: 1;
   text-align: center;
   width: 200px;
@@ -89,4 +94,8 @@ body {
   position: relative;
   border: 1px solid #E8E8E8;
   font-size: 24px;
-  border-bottom-right-radius: 60px 5px;}
+  border-bottom-right-radius: 60px 5px;
+  display: inline-block;
+  font-weight: bold;
+
+   }
