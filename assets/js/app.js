@@ -1,13 +1,12 @@
-
-  var config = {
-    apiKey: "AIzaSyB-oSIp-lGKykAVqmMtMKPJ52XPpBHAijQ",
-    authDomain: "post-it-c9bc7.firebaseapp.com",
-    databaseURL: "https://post-it-c9bc7.firebaseio.com",
-    projectId: "post-it-c9bc7",
-    storageBucket: "post-it-c9bc7.appspot.com",
-    messagingSenderId: "314587791240"
-  };
-  firebase.initializeApp(config);
+var config = {
+  apiKey: "AIzaSyB-oSIp-lGKykAVqmMtMKPJ52XPpBHAijQ",
+  authDomain: "post-it-c9bc7.firebaseapp.com",
+  databaseURL: "https://post-it-c9bc7.firebaseio.com",
+  projectId: "post-it-c9bc7",
+  storageBucket: "post-it-c9bc7.appspot.com",
+  messagingSenderId: "314587791240"
+};
+firebase.initializeApp(config);
 
 var database = firebase.database();
 var ref = database.ref();
@@ -309,8 +308,6 @@ $(document).on("click",".thumb_down", function(){
 
 	ref.child("Posts").child("post"+id).update(updating);
 })
-
-
 
 $('.fixed_bottom').hide();
 $('.fixed_right').hide();

@@ -1,0 +1,135 @@
+//output:game.html
+<!DOCTYPE html>
+html(lang="en")
+head
+  meta(charset="UTF-8")
+  meta(name="viewport", content="width=device-width, initial-scale=1.0")
+  meta(http-equiv="X-UA-Compatible", content="ie=edge")
+  //RESET
+  link(rel="stylesheet", href="assets/css/reset.css")
+  //FONT
+  link(rel="stylesheet", href="https://fonts.googleapis.com/css?family=Amatic+SC")
+  //FONTAWESOME
+  link(rel='stylesheet', href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css")
+  //BOOTSTRAP
+  link(rel="stylesheet", href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css")
+  //CUSTOM CSS
+  link(rel="stylesheet", href="assets/css/style.css")
+  title Post-It Game
+body  
+
+  //TOPIC DISPLAY CONTAINER    
+  nav.navbar.background_red
+    .container.text-center
+      a.col-12.col-md-4(href="index.html")
+        i.fa.fa-home.fa-2x.text-white
+      h2.col-12.col-md-4.text-white Pineapple Pizza
+      h3.col-12.col-md-4.text-white 12:30
+      
+  br
+  
+  //POST-IT DISPLAY AREA
+  .container
+    .row.justify-content-center
+      .postit.gradient_green.rotate-left
+        p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Culpa saepe at itaque officiis velit reiciendis? Harum eos culpa quia ipsa!
+      .postit.gradient_purple
+        p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Culpa saepe at itaque officiis velit reiciendis? Harum eos culpa quia ipsa!
+      .postit.gradient_yellow.rotate-right
+        p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Culpa saepe at itaque officiis velit reiciendis? Harum eos culpa quia ipsa!
+      .postit.gradient_orange.rotate-right
+        p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Culpa saepe at itaque officiis velit reiciendis? Harum eos culpa quia ipsa!
+      .postit.gradient_purple
+        p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Culpa saepe at itaque officiis velit reiciendis? Harum eos culpa quia ipsa!
+      .postit.gradient_green
+        p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Culpa saepe at itaque officiis velit reiciendis? Harum eos culpa quia ipsa!
+      .postit.gradient_purple.rotate-left
+        p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Culpa saepe at itaque officiis velit reiciendis? Harum eos culpa quia ipsa!
+      .postit.gradient_yellow
+        p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Culpa saepe at itaque officiis velit reiciendis? Harum eos culpa quia ipsa!
+      .postit.gradient_orange
+        p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Culpa saepe at itaque officiis velit reiciendis? Harum eos culpa quia ipsa!
+      .postit.gradient_green.rotate-left
+        p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Culpa saepe at itaque officiis velit reiciendis? Harum eos culpa quia ipsa!     
+      .postit.gradient_orange.rotate-right
+        p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Culpa saepe at itaque officiis velit reiciendis? Harum eos culpa quia ipsa!
+      .postit.gradient_purple
+        p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Culpa saepe at itaque officiis velit reiciendis? Harum eos culpa quia ipsa!
+      .postit.gradient_yellow.rotate-left
+        p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Culpa saepe at itaque officiis velit reiciendis? Harum eos culpa quia ipsa!
+      .postit.gradient_yellow.rotate-left
+        p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Culpa saepe at itaque officiis velit reiciendis? Harum eos culpa quia ipsa!
+      .postit.gradient_green
+        p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Culpa saepe at itaque officiis velit reiciendis? Harum eos culpa quia ipsa!
+      .postit.gradient_orange.rotate-right
+        p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Culpa saepe at itaque officiis velit reiciendis? Harum eos culpa quia ipsa!
+      .postit.gradient_purple
+        p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Culpa saepe at itaque officiis velit reiciendis? Harum eos culpa quia ipsa!
+      .postit.gradient_yellow.rotate-left
+        p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Culpa saepe at itaque officiis velit reiciendis? Harum eos culpa quia ipsa!
+      .postit.gradient_yellow.rotate-left
+        p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Culpa saepe at itaque officiis velit reiciendis? Harum eos culpa quia ipsa!
+      
+      //BUTTONS FOR SLIDE OUT COMPONENTS 
+      //BOTTOM BUTTON 
+      p
+        a.btn.btn-lg.text-white.background_blue#bottom_nav_show.left Post-It
+      //SIDEBAR BUTTON
+      p
+        a.btn.btn-lg.bg-white.round_button#leaderboard_show.right
+          i.fa.fa-chevron-circle-left.fa-3x.text_blue(aria-hidden='true')
+
+  //SIDEBAR LEADERBOARD
+  .jumbotron.fixed_right.background_blue#leaderboard
+    a.btn.btn-lg.bg-white.round_button#leaderboard_slide_out.right
+      i.fa.fa-chevron-circle-right.fa-3x.text_blue(aria-hidden='true')
+    br
+    .container.justify-content-center
+      .row.text-center
+        .col-12
+          h2.text-white LEADERBOARD
+      .row.justify-content-center
+        ul.list-group.text-center
+          li.list-group-item
+            i.fa.fa-user(aria-hidden='true')  LEADER 1
+          li.list-group-item
+            i.fa.fa-user(aria-hidden='true')  LEADER 2
+          li.list-group-item
+            i.fa.fa-user(aria-hidden='true')  LEADER 3
+          li.list-group-item
+            i.fa.fa-user(aria-hidden='true')  LEADER 4
+          li.list-group-item
+            i.fa.fa-user(aria-hidden='true')  LEADER 5
+          li.list-group-item
+            i.fa.fa-user(aria-hidden='true')  LEADER 6
+          li.list-group-item
+            i.fa.fa-user(aria-hidden='true')  LEADER 7
+          li.list-group-item
+            i.fa.fa-user(aria-hidden='true')  LEADER 8
+          li.list-group-item
+            i.fa.fa-user(aria-hidden='true')  LEADER 9
+          li.list-group-item
+            i.fa.fa-user(aria-hidden='true')  LEADER 10
+                            
+
+  //USER INPUT FOR POST-IT
+  .jumbotron.fixed_bottom.background_blue
+    i.fa.fa-times.fa-2x.close-button.text-white
+    .container.justify-content-center
+      .row.text-center
+        .col-12
+          h3.text-white Post-It right up!
+      br
+      .row.justify-content-center
+        .input-group.col-8.justify-content-center
+          input.form-control(type="text", placeholder="Text here . . .")
+          span.input-group-btn
+            button.btn.btn-secondary(type="submit") Submit
+ 
+  br
+  //JQUERY
+  script(src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js')       
+  //BOOTSTRAP
+  script(src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js")
+  //JAVASCRIPT
+  script(src='assets/js/app.js')
