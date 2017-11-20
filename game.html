@@ -58,18 +58,28 @@
     padding-bottom: 5px;
     display:block;
   }
+  #view_number{
+    font-weight:bold;
+    padding: 0 10px;
+    font-size:20px;
+    color:red;
+    padding-bottom: 5px;
+  }
 </style>
 </head>
 <body> 
   <!--TOPIC DISPLAY CONTAINER    -->
   <nav class="navbar background_red">
-    <div class="container text-center"><a href="index.html" class="col-12 col-md-4"><i class="fa fa-home fa-2x text-white"></i></a>
+    <div class="container text-center"><a href="#" class="col-12 col-md-4"><i class="fa fa-home fa-2x text-white"></i></a>
       <h2 class="col-12 col-md-4 text-white" id="topic_text"></h2>
       <h3 class="col-12 col-md-4 text-white" id="timer_display"></h3>
     </div>
   </nav><br/>
   <!--POST-IT DISPLAY AREA-->
   <div class="container">
+    <div class="row justify-content-center" id="view_number_div">
+      <span id="view_number"></span>
+    </div>
     <div class="row justify-content-center" id="sorting_div">
       <span id="order_by_date">Order by Dates</span>
       <span id="order_by_like">Order by likes</span>

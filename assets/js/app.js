@@ -18,6 +18,7 @@ connectedRef.on("value", function(snap){
   if (snap.val()) {
   	var count = snap.numChildren();
 
+
   	if (count<10){
   		count = "00"+count;
   	}
@@ -33,9 +34,17 @@ connectedRef.on("value", function(snap){
     var con = connectionsRef.push(updating_con);
 
 
+
+
     con.onDisconnect().remove();
 }
 });
+
+ref.child("connections").on("value", function(snap){
+
+	$("#view_number").text(snap.numChildren()+" people are online");
+
+})
 
 
 
@@ -313,7 +322,7 @@ setInterval(like_refresh,3000)
 
 $(document).on("click",".thumb_up", function(){
 	var id = $(this).parent().attr("id");
-	$(this).attr("disabled","disabled")
+	$(this).attr({"disabled": "disabled"})
 	var like;	
 	ref.child("Posts").child("post"+id).on("value", function(snap){
 		like = snap.val().like;
@@ -325,7 +334,7 @@ $(document).on("click",".thumb_up", function(){
 })
 
 $(document).on("click",".thumb_down", function(){
-	$(this).attr("disabled","disabled")
+	$(this).attr({"disabled": "disabled"})
 	var id = $(this).parent().attr("id");
 	var dislike;	
 	ref.child("Posts").child("post"+id).on("value", function(snap){
