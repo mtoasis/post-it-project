@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en"></html>
+<head>
+  <!--FONT-->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Amatic+SC"/>
+  <!--ICONS-->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons"/>
+  <!--MATERALIZE-->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css"/>
+  <!--CUSTOM STYLSHEET-->
+  <link rel="stylesheet" href="assets/css/style.css"/>
+  <!-- FIREBASE -->
+  <script src="https://www.gstatic.com/firebasejs/4.6.2/firebase.js"></script>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
+  <title>Post-It game</title>
+</head>
+<body>
+  <!--TOPIC AND NAVBAR-->
+  <nav class="blue-grey darken-4">
+    <div class="container">
+      <div class="nav-wrapper"><a href="index.html" class="left">
+        <i class="material-icons large">home</i>
+        <a id="topic_text" class="brand-logo center">Bloop Bleep Blap</a>
+        <h4 id="timer_display" class="right">12:30</h4>
+      </div>
+    </div>
+  </nav>
+  <!--POST DISPLAY AREA-->
+  <div class="container">
+    <div id="post_area" class="row">
+      <div class="postit gradient_purple rotate_left">
+        <p>Hello, this is a sample post. Bloop bleep blap. Please ignore me and carry on.</p>
+        <div class="button_container">
+          <button class="btn-floating thumb_up green accent-3"><i class="material-icons">thumb_up</i></button>
+          <p class="likes">+230</p>
+          <button class="btn-floating thumb_down red accent-3"><i class="material-icons">thumb_down</i></button>
+          <p class="dislikes">-150</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!--POST-IT BUTTON THAT OPENS UP MODAL      -->
+  <button id="post-it_button" href="#modal1" class="btn-large waves-effect waves-light red darken-3 modal-trigger hide-on-med-and-down show-on-large">Post-It</button>
+  <!--SUBMIT MODAL-->
+  <div id="modal1" class="modal">
+    <div class="modal-content center-align">
+      <h3>Post-It right up!</h3>
+      <div class="row">
+        <div class="col s12">
+          <div class="postit_big gradient_purple">
+            <textarea data-length='50'></textarea>
+          </div>
+        </div>
+        <button id="submit_button" class="btn waves-effect waves-light modal-action modal-close blue-grey darken-2">Submit</button>
+      </div>
+    </div>
+  </div>
+  <!--BUTTON THAT OPENS LEADERBOARD-->
+  <div class="fixed-action-btn">
+    <button href="#" data-activates="slide-out" class="btn-floating btn-large waves-effect waves-light button-collapse red darken-3"><i class="material-icons">assignment</i></button>
+  </div>
+  <!--LEADERBOARD    -->
+  <ul id="slide-out" class="side-nav fixed-right">
+    <div id="leaderboard" class="container">
+      <h5 id="topic_text">Topic Text Leaders</h5>
+      <p id="leader1">leader 1 . . .</p>
+    </div>
+  </ul>
+</body>
+<!--JQUERY-->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.js"></script>
+<!--MATERIALIZE JS-->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
+<!--CUSTOM JS  -->
+<script src="assets/js/app.js"></script>
