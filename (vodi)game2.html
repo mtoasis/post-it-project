@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en"></html>
+<html lang="en">
 <head>
   <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
@@ -20,22 +20,103 @@
   <script src="https://cdn.jsdelivr.net/momentjs/2.12.0/moment.min.js"></script>
 
   <title>Post-It Game</title>
+  <style>
+  #order_by_like,#order_by_dislike,#order_by_date{
+    font-weight:bold;
+    padding: 0 10px;
+    font-size:20px;    
+  }
+
+  #order_by_like:hover, #order_by_dislike:hover,#order_by_date:hover{
+    color:gray;
+    cursor:pointer;
+    text-decoration: underline;
+  }
+
+  #sorting_div{
+    padding-bottom:20px;
+  }
+
+  #warning{
+    color:red;
+    font-weight: bold;
+    font-size:20px;
+    padding:0;
+  }
+
+  .post_number{
+    position:absolute;
+    left:0;
+    top:0;
+    font-size:20px;
+    padding-bottom: 5px;
+  }
+
+  .post_text{
+    position: relative;
+    top:20px;
+    font-size:20px;
+    padding-bottom: 5px;
+    display:block;
+  }
+  #view_number{
+    font-weight:bold;
+    padding: 0 10px;
+    font-size:20px;
+    color:red;
+    padding-bottom: 5px;
+  }
+
+
+
+
+</style>
 </head>
 <body> 
   <!--TOPIC DISPLAY CONTAINER    -->
   <nav class="navbar background_red">
-    <div class="container text-center"><a href="index.html" class="col-12 col-md-4"><i class="fa fa-home fa-2x text-white"></i></a>
+    <div class="container text-center"><a href="#" class="col-12 col-md-4"><i class="fa fa-home fa-2x text-white"></i></a>
       <h2 class="col-12 col-md-4 text-white" id="topic_text"></h2>
       <h3 class="col-12 col-md-4 text-white" id="timer_display"></h3>
     </div>
   </nav><br/>
   <!--POST-IT DISPLAY AREA-->
   <div class="container">
+    <div class="row justify-content-center" id="view_number_div">
+      <span id="view_number"></span>
+    </div>
+    <div class="row justify-content-center" id="sorting_div">
+      <span id="order_by_date">Order by Dates</span>
+      <span id="order_by_like">Order by likes</span>
+      <span id="order_by_dislike">Order by dislikes</span>
+    </div>
+<!--POST-IT BUTTON THAT OPENS UP MODAL      -->
+    <button id="post_button" href="#modal1" class="btn-large waves-effect waves-light blue-grey darken-3 modal-trigger">Post-It</button>
+    <!--SUBMIT MODAL-->
+    <div id="modal1" class="modal">
+        <div class="modal-content center-align">
+            <h3>Post-It right up!</h3>
+            <div class="row">
+                <div class="col s12">
+                    <div class="postit_big gradient_purple" id='input_text'>
+                        <textarea data-length='128'></textarea>
+                    </div>
+                </div>
+                <button id="submit_button" class="btn waves-effect waves-light modal-action modal-close blue-grey darken-2">Submit</button>
+            </div>
+        </div>
+    </div>
     <div class="row justify-content-center" id="post_area">
+
+
+     
 
       <!--BUTTONS FOR SLIDE OUT COMPONENTS -->
       <!--BOTTOM BUTTON -->
-      <p><a id="bottom_nav_show" class="btn btn-lg text-white background_blue left">Post-It</a></p>
+    </div>
+    <div class="row justify-content-center"> 
+<!-- <button id="post_button" class="btn btn-lg text-white background_blue left">Post-It</button> -->
+
       <!--SIDEBAR BUTTON-->
       <p><a id="leaderboard_show" class="btn btn-lg bg-white round_button right"><i aria-hidden="true" class="fa fa-chevron-circle-left fa-3x text_blue"></i></a></p>
     </div>
@@ -74,12 +155,21 @@
       </div><br/>
       <div class="row justify-content-center">
         <div class="input-group col-8 justify-content-center">
-          <input type="text" placeholder="Text here . . ." class="form-control" id="input_text"><span class="input-group-btn">
-            <button type="submit" class="btn btn-secondary" id="submit_button">Submit</button></span>
+<!--  -->
+          <input maxlength="80" type="text" placeholder="Text here . . ." class="form-control" id="input_text"><span class="input-group-btn">
+            <button type="submit" class="btn btn-secondary" id="submit_button">Submit</button></span>            
         </div>
+        <div class="input-group col-8 justify-content-center">
+            <span id="warning"></span>
+          </div>
       </div>
     </div>
   </div><br/>
+
+
+
+
+ <!--link to javascript-->
   <!--JQUERY-->
 
   <!--BOOTSTRAP-->
@@ -87,3 +177,4 @@
   <!--JAVASCRIPT-->
   <script src="assets/js/app.js"></script>
 </body>
+</html>
