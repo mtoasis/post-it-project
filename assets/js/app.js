@@ -313,7 +313,7 @@ function xmark(){
 
 				if (dislikes>7){
 					// console.log("working")
-					console.log(target)
+					// console.log(target)
 					// $(target).css("display","block")
 
 				var x_mark_img = $('<img class="xmark" src="assets/images/xmark.png">');
@@ -331,7 +331,7 @@ function xmark(){
 
 function like_refresh(){
 	xmark()
-	console.log("refreshing likes")
+	// console.log("refreshing likes")
 	ref.on("value",function(){
 	ref.child("Posts").on("value",function(snap){
 
