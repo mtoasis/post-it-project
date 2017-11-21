@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en"></html>
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
+  <!--RESET-->
+  <link rel="stylesheet" href="assets/css/reset.css"/>
+  <!--FONT-->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Amatic+SC"/>
+  <!--FONTAWESOME-->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"/>
+  <!--BOOTSTRAP-->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css"/>
+  <!--CUSTOM CSS-->
+  <link rel="stylesheet" href="assets/css/style.css"/>
+
+  <script src="https://www.gstatic.com/firebasejs/4.6.2/firebase.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/momentjs/2.12.0/moment.min.js"></script>
+
+  <title>Post-It Game</title>
+</head>
+<body> 
+  <!--TOPIC DISPLAY CONTAINER    -->
+  <nav class="navbar background_red">
+    <div class="container text-center"><a href="index.html" class="col-12 col-md-4"><i class="fa fa-home fa-2x text-white"></i></a>
+      <h2 class="col-12 col-md-4 text-white" id="topic_text"></h2>
+      <h3 class="col-12 col-md-4 text-white" id="timer_display"></h3>
+    </div>
+  </nav><br/>
+  <!--POST-IT DISPLAY AREA-->
+  <div class="container">
+    <div class="row justify-content-center" id="post_area">
+
+      <!--BUTTONS FOR SLIDE OUT COMPONENTS -->
+      <!--BOTTOM BUTTON -->
+      <p><a id="bottom_nav_show" class="btn btn-lg text-white background_blue left">Post-It</a></p>
+      <!--SIDEBAR BUTTON-->
+      <p><a id="leaderboard_show" class="btn btn-lg bg-white round_button right"><i aria-hidden="true" class="fa fa-chevron-circle-left fa-3x text_blue"></i></a></p>
+    </div>
+  </div>
+  <!--SIDEBAR LEADERBOARD-->
+  <div id="leaderboard" class="jumbotron fixed_right background_blue"><a id="leaderboard_slide_out" class="btn btn-lg bg-white round_button right"><i aria-hidden="true" class="fa fa-chevron-circle-right fa-3x text_blue"></i></a><br/>
+    <div class="container justify-content-center">
+      <div class="row text-center">
+        <div class="col-12">
+          <h2 class="text-white">LEADERBOARD</h2>
+        </div>
+      </div>
+      <div class="row justify-content-center">
+        <ul class="list-group text-center">
+          <li class="list-group-item"><i aria-hidden="true" class="fa fa-user"> LEADER 1</i></li>
+          <li class="list-group-item"><i aria-hidden="true" class="fa fa-user"> LEADER 2</i></li>
+          <li class="list-group-item"><i aria-hidden="true" class="fa fa-user"> LEADER 3</i></li>
+          <li class="list-group-item"><i aria-hidden="true" class="fa fa-user"> LEADER 4</i></li>
+          <li class="list-group-item"><i aria-hidden="true" class="fa fa-user"> LEADER 5</i></li>
+          <li class="list-group-item"><i aria-hidden="true" class="fa fa-user"> LEADER 6</i></li>
+          <li class="list-group-item"><i aria-hidden="true" class="fa fa-user"> LEADER 7</i></li>
+          <li class="list-group-item"><i aria-hidden="true" class="fa fa-user"> LEADER 8</i></li>
+          <li class="list-group-item"><i aria-hidden="true" class="fa fa-user"> LEADER 9</i></li>
+          <li class="list-group-item"><i aria-hidden="true" class="fa fa-user"> LEADER 10</i></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <!--USER INPUT FOR POST-IT-->
+  <div class="jumbotron fixed_bottom background_blue"><i class="fa fa-times fa-2x close-button text-white"></i>
+    <div class="container justify-content-center">
+      <div class="row text-center">
+        <div class="col-12">
+          <h3 class="text-white">Post-It right up!</h3>
+        </div>
+      </div><br/>
+      <div class="row justify-content-center">
+        <div class="input-group col-8 justify-content-center">
+          <input type="text" placeholder="Text here . . ." class="form-control" id="input_text"><span class="input-group-btn">
+            <button type="submit" class="btn btn-secondary" id="submit_button">Submit</button></span>
+        </div>
+      </div>
+    </div>
+  </div><br/>
+  <!--JQUERY-->
+
+  <!--BOOTSTRAP-->
+<!--   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js"></script> -->
+  <!--JAVASCRIPT-->
+  <script src="assets/js/app.js"></script>
+</body>
