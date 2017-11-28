@@ -163,7 +163,7 @@ ref.child("connections").on("value", function(snap){
 
 
 
-$("#topic_text").text("Should internet providers have power to c ")
+$("#topic_text").text("Should we have net neutrality?")
 
 function time_now(){
 	var current_time = moment().format("hh:mm:ss A");	
