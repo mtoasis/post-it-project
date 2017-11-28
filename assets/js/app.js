@@ -141,7 +141,7 @@ var i=0;
 var index = 0;
 
 var color_array = ["gradient_purple","gradient_yellow","gradient_green","gradient_orange"];
-var rotation_array = ["rotate-left","rotate-right",""];
+var rotation_array = ["rotate_left","rotate_right",""];
 
 
 $(document).on("keyup", "#input_text", function(){
