@@ -22,6 +22,112 @@ $("#uncen_button").on("click",function(){
 }
 })
 
+function next_topic(){
+	// for (var i=0; i<5; i++){
+	ref.child("Topic").once("value",function(snap){
+		var i=0;
+
+		snap.forEach(function(childsnap){
+			var topic = childsnap.val().topic
+			console.log(topic)
+			var id = "#topic_"+i;
+			console.log(id)
+			$(id).text(topic);
+			i+=1
+		})
+	})
+}
+
+
+next_topic();
+
+// var iii=0;
+
+// $("#push_topic").on("click", function pushing_topic(){
+// 	var topic_array =
+// ["Is TESLA going to be a bigger company than Apple in the next 20 years?",
+// "Is sexual orientation determined at birth?",
+// "Is a college education worth of money?",
+// "Should abortion be legal?",
+// "Should Trump build his wall?"];
+
+// 		var topic = 
+// 		{topic:topic_array[iii],
+// 		like: 0,
+// 		dislike: 0};
+// 		ref.child("Topic").child(iii).update(topic)
+// 		 iii+=1;
+
+// });
+
+$(document).on("click",".topic_like", function(){
+	var var_id = $(this).attr("id");
+	$(this).attr({"disabled": "disabled"})
+	var like;
+	var id=0;
+
+	if(var_id == "topic_0_like"){
+		id=0;
+	}
+	else if (var_id =="topic_1_like"){
+		id=1;
+	}
+	else if (var_id =="topic_2_like"){
+		id=2;
+	}
+	else if (var_id =="topic_3_like"){
+		id=3;
+	}
+	else if (var_id =="topic_4_like"){
+		id=4;
+	}
+	console.log(id)
+
+	ref.child("Topic").child(id).on("value", function(snap){
+		like = snap.val().like;
+	})
+	like +=1;
+	console.log(like)
+	var updating = {like: like};
+
+	ref.child("Topic").child(id).update(updating);
+})
+
+$(document).on("click",".topic_dislike", function(){
+	var var_id = $(this).attr("id");
+	console.log(var_id)
+	$(this).attr({"disabled": "disabled"})
+	var dislike;
+	var id=0;
+
+	if(var_id == "topic_0_dislike"){
+		id=0;
+	}
+	else if (var_id =="topic_1_dislike"){
+		id=1;
+	}
+	else if (var_id =="topic_2_dislike"){
+		id=2;
+	}
+	else if (var_id =="topic_3_dislike"){
+		id=3;
+	}
+	else if (var_id =="topic_4_dislike"){
+		id=4;
+	}
+	console.log(id)
+
+	ref.child("Topic").child(id).on("value", function(snap){
+		dislike = snap.val().dislike;
+	})
+	dislike +=1;
+	console.log(dislike)
+	var updating = {dislike: dislike};
+
+	ref.child("Topic").child(id).update(updating);
+})
+
+
 connectedRef.on("value", function(snap){
 
   if (snap.val()) {
@@ -57,39 +163,7 @@ ref.child("connections").on("value", function(snap){
 
 
 
-// ref.child("Topic").orderByChild("post").limitToLast(1).on("child_added", function(snap){
-
-// 	var topic = snap.val();
-
-// 	$("#topic_text").text(topic);
-// });
-
-// ref.child("connections").on("value",function(snap){
-
-// 	var connection_number = snap.numChildren();
-
-// 	if (connection_number==1 ){ // keep check the connection number and if only 1 is left, start timing function. if not don't run.
-		
-// 		timing()
-// 	}
-// })
-
-// ref.child("time_left").on("value",function(snap){ //time display
-		
-// })
-
-// var topic_array = [
-// // "Should abortion be legal?",
-// // "Should animals be used for scientific or commercial testing?",
-// // "Is sexual orientation determined at birth?",
-// // "Is a college education worth it?",
-// // "Should the death penalty be allowed?",
-// // "Is golf a sport?",
-// // "Should marijuana be a medical option?",
-// "Should prostitution be legal?"
-// ];
-
-$("#topic_text").text("Should people get married?")
+$("#topic_text").text("Should internet providers have power to c ")
 
 function time_now(){
 	var current_time = moment().format("hh:mm:ss A");	
@@ -201,8 +275,7 @@ ref.child("Posts").on("value",function(snap){
 })
 like_refresh();
 
-ref.child("Posts").limitToLast(1).on("child_added", function(snap){
-	
+ref.child("Posts").limitToLast(1).on("child_added", function(snap){	
 	
 	if (new_index>index){
 
@@ -327,8 +400,29 @@ function like_refresh(){
 	xmark()
 	// console.log("refreshing likes")
 	ref.on("value",function(){
-	ref.child("Posts").on("value",function(snap){
+		ref.child("Topic").on("value",function(snap){
+			var index = snap.numChildren();
+			var array_like=[];
+			var array_dislike=[];
 
+			snap.forEach(function(childsnap){
+				var likes = childsnap.val().like;
+				var dislikes = childsnap.val().dislike;
+
+				array_like.push(likes);
+				array_dislike.push(dislikes);
+			})
+			for (var i=0; i<5; i++){
+				var target = "#like_"+i;
+				var target2 = "#dislike_"+i;
+				$(target).text(array_like[i]);
+				$(target2).text(array_dislike[i]);				
+			}
+		})
+	})
+
+	ref.on("value",function(){
+	ref.child("Posts").on("value",function(snap){
 
 		var index = snap.numChildren();
 		var array_like = [];
