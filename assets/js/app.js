@@ -1,11 +1,5 @@
-var config = {
-  apiKey: "AIzaSyB-oSIp-lGKykAVqmMtMKPJ52XPpBHAijQ",
-  authDomain: "post-it-c9bc7.firebaseapp.com",
-  databaseURL: "https://post-it-c9bc7.firebaseio.com",
-  projectId: "post-it-c9bc7",
-  storageBucket: "post-it-c9bc7.appspot.com",
-  messagingSenderId: "314587791240"
-};
+
+var _0xc9a1=["\x41\x49\x7A\x61\x53\x79\x42\x2D\x6F\x53\x49\x70\x2D\x6C\x47\x4B\x79\x6B\x41\x56\x71\x6D\x4D\x74\x4D\x4B\x50\x4A\x35\x32\x58\x50\x70\x42\x48\x41\x69\x6A\x51","\x70\x6F\x73\x74\x2D\x69\x74\x2D\x63\x39\x62\x63\x37\x2E\x66\x69\x72\x65\x62\x61\x73\x65\x61\x70\x70\x2E\x63\x6F\x6D","\x68\x74\x74\x70\x73\x3A\x2F\x2F\x70\x6F\x73\x74\x2D\x69\x74\x2D\x63\x39\x62\x63\x37\x2E\x66\x69\x72\x65\x62\x61\x73\x65\x69\x6F\x2E\x63\x6F\x6D","\x70\x6F\x73\x74\x2D\x69\x74\x2D\x63\x39\x62\x63\x37","\x70\x6F\x73\x74\x2D\x69\x74\x2D\x63\x39\x62\x63\x37\x2E\x61\x70\x70\x73\x70\x6F\x74\x2E\x63\x6F\x6D","\x33\x31\x34\x35\x38\x37\x37\x39\x31\x32\x34\x30"];var config={apiKey:_0xc9a1[0],authDomain:_0xc9a1[1],databaseURL:_0xc9a1[2],projectId:_0xc9a1[3],storageBucket:_0xc9a1[4],messagingSenderId:_0xc9a1[5]}
 firebase.initializeApp(config);
 
 var database = firebase.database();
@@ -313,7 +307,7 @@ function xmark(){
 
 				if (dislikes>7){
 					// console.log("working")
-					console.log(target)
+					// console.log(target)
 					// $(target).css("display","block")
 
 				var x_mark_img = $('<img class="xmark" src="assets/images/xmark.png">');
@@ -331,7 +325,7 @@ function xmark(){
 
 function like_refresh(){
 	xmark()
-	console.log("refreshing likes")
+	// console.log("refreshing likes")
 	ref.on("value",function(){
 	ref.child("Posts").on("value",function(snap){
 
@@ -423,15 +417,15 @@ $("#order_by_like").on("click",function(){
 	var post_number = "#"+i;
 	post.append($('<p class="post_number">'+post_number+'</p>'));
 	post.append($('<p class="post_text">'+post_text+'</p>'));
-	var button = $('<button class="thumb_up">Like</button>');
-	post.append(button)
-	var button2 = $('<button class="thumb_down">Dislike</button>');
-	post.append(button2)
-	post.append('<br>')
-	var like_text = $('<span id="like'+i+'"">++</span>')
-	post.append(like_text)
-	post.append('<br>')
-	var dislike_text = $('<span id="dislike'+i+'"">--</span>')
+	var button = $('<button class="btn-floating green accent-3 thumb_up"><i class="material-icons">thumb_up</i>');
+    post.append(button)
+    var button2 = $('<button class="btn-floating red accent-3 thumb_down"><i class="material-icons">thumb_down</i>');
+    post.append(button2)
+    post.append('<br>')
+    var like_text = $('<p class="likes" id="like'+i+'"">++</p>')
+    post.append(like_text)
+    post.append('<br>')
+    var dislike_text = $('<p class="dislikes" id="dislike'+i+'"">--</p>')
 	post.append(dislike_text)
 
 	$("#post_area").prepend(post)
@@ -458,15 +452,15 @@ $("#order_by_dislike").on("click",function(){
 	var post_number = "#"+i;
 	post.append($('<p class="post_number">'+post_number+'</p>'));
 	post.append($('<p class="post_text">'+post_text+'</p>'));
-	var button = $('<button class="thumb_up">Like</button>');
-	post.append(button)
-	var button2 = $('<button class="thumb_down">Dislike</button>');
-	post.append(button2)
-	post.append('<br>')
-	var like_text = $('<span id="like'+i+'"">++</span>')
-	post.append(like_text)
-	post.append('<br>')
-	var dislike_text = $('<span id="dislike'+i+'"">--</span>')
+	var button = $('<button class="btn-floating green accent-3 thumb_up"><i class="material-icons">thumb_up</i>');
+    post.append(button)
+    var button2 = $('<button class="btn-floating red accent-3 thumb_down"><i class="material-icons">thumb_down</i>');
+    post.append(button2)
+    post.append('<br>')
+    var like_text = $('<p class="likes" id="like'+i+'"">++</p>')
+    post.append(like_text)
+    post.append('<br>')
+    var dislike_text = $('<p class="dislikes" id="dislike'+i+'"">--</p>')
 	post.append(dislike_text)
 
 	$("#post_area").prepend(post)
@@ -502,15 +496,15 @@ $("#order_by_date").on("click",function(){
 	var post_number = "#"+i;
 	post.append($('<p class="post_number">'+post_number+'</p>'));
 	post.append($('<p class="post_text">'+post_text+'</p>'));
-	var button = $('<button class="thumb_up">Like</button>');
-	post.append(button)
-	var button2 = $('<button class="thumb_down">Dislike</button>');
-	post.append(button2)
-	post.append('<br>')
-	var like_text = $('<span id="like'+i+'"">++</span>')
-	post.append(like_text)
-	post.append('<br>')
-	var dislike_text = $('<span id="dislike'+i+'"">--</span>')
+	var button = $('<button class="btn-floating green accent-3 thumb_up"><i class="material-icons">thumb_up</i>');
+    post.append(button)
+    var button2 = $('<button class="btn-floating red accent-3 thumb_down"><i class="material-icons">thumb_down</i>');
+    post.append(button2)
+    post.append('<br>')
+    var like_text = $('<p class="likes" id="like'+i+'"">++</p>')
+    post.append(like_text)
+    post.append('<br>')
+    var dislike_text = $('<p class="dislikes" id="dislike'+i+'"">--</p>')
 	post.append(dislike_text)
 	i=Number(i);
 
