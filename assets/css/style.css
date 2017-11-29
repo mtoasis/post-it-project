@@ -4,7 +4,65 @@ p,
 h2 {
     font-family: 'Kalam', cursive;
 }
+header {
+   position: relative;
+   top: 0;
+   bottom: 0;
+   width: 100%;
+   height: 100px;
+   display: flex;
+   text-align: center;
+   font-size: 45px;
+   color:white;
+   font-family: 'Kalam', cursive;
+   z-index: 3;
+   box-shadow: 0px 8px 10px gray,
+       -10px 8px 15px gray, 10px 8px 15px gray
 
+
+}
+
+#topic_text{
+    text-decoration: underline;
+    font-weight: bold;
+}
+
+
+.topic_like,.topic_like_text{
+    position: absolute;
+    left:100px;
+}
+.topic_dislike,.topic_dislike_text{
+    position: absolute;
+    right:100px;
+}
+.topic_like_text,.topic_dislike_text{
+    color:blue;
+}
+
+
+#slide-out {
+
+   width: 450px;
+   min-width: 250px;
+   max-width: 470px;
+   background-image: url(http://ccslancers.com/wp-content/uploads/chalkboard.jpg);
+   background-size: cover;
+   background-repeat: none;
+}
+#leaderboard {
+
+   font-size: 20px;
+   line-height: 20px;
+   background: -webkit-linear-gradient(#faf47d 19px, #8296a1 20px);
+   -webkit-background-size: 20px;
+   padding: 10px;
+}
+button {
+
+   box-shadow: 0 0 5px 5px #a8a5a5 ;
+   border-radius: 25px;
+}
 #instructions {
     position: fixed;
     right: 20px;
@@ -62,10 +120,10 @@ header {
     animation: titleAnimation 36s linear infinite 0s;
 }
 .slideshow li:nth-child(1) span {
-    background-image: url(http://www.occupy.com/sites/default/files/field/image/net-neutrality-op.jpg)
+    background-image: url("image_1.png")
 }
 .slideshow li:nth-child(2) span {
-    background-image: url(https://tctechcrunch2011.files.wordpress.com/2017/05/dont-tread-on-net2.png?w=1279&h=727&crop=1);
+    background-image: url("image_2.png");
     -webkit-animation-delay: 6s;
     -moz-animation-delay: 6s;
     -o-animation-delay: 6s;
@@ -73,7 +131,7 @@ header {
     animation-delay: 6s;
 }
 .slideshow li:nth-child(3) span {
-    background-image: url(https://files.slack.com/files-pri/T6FKK030R-F86DCJZNZ/image.png);
+    background-image: url("image_3.png");
     -webkit-animation-delay: 12s;
     -moz-animation-delay: 12s;
     -o-animation-delay: 12s;
@@ -81,7 +139,7 @@ header {
     animation-delay: 12s;
 }
 .slideshow li:nth-child(4) span {
-    background-image: url(https://files.slack.com/files-pri/T6FKK030R-F87BDA84F/image.png);
+    background-image: url("image_4.png");
     -webkit-animation-delay: 18s;
     -moz-animation-delay: 18s;
     -o-animation-delay: 18s;
@@ -89,7 +147,7 @@ header {
     animation-delay: 18s;
 }
 .slideshow li:nth-child(5) span {
-    background-image: url(https://files.slack.com/files-pri/T6FKK030R-F875FFH9U/image.png);
+    background-image: url("image_5.png");
     -webkit-animation-delay: 24s;
     -moz-animation-delay: 24s;
     -o-animation-delay: 24s;
@@ -97,7 +155,7 @@ header {
     animation-delay: 24s;
 }
 .slideshow li:nth-child(6) span {
-    background-image: url(https://files.slack.com/files-pri/T6FKK030R-F85K92Q3A/image.png);
+    background-image: url("image_6.png");
     -webkit-animation-delay: 30s;
     -moz-animation-delay: 30s;
     -o-animation-delay: 30s;
