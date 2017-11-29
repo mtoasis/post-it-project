@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
+
 </html>
+
 <head>
     <!--FONTS-->
     <link href="https://fonts.googleapis.com/css?family=Indie+Flower" rel="stylesheet">
@@ -10,7 +12,7 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
     <!--MATERALIZE-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css" />
-      <script src="https://cdn.jsdelivr.net/momentjs/2.12.0/moment.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/momentjs/2.12.0/moment.min.js"></script>
     <!--CUSTOM STYLESHEET-->
     <link rel="stylesheet" href="assets/css/style.css" />
     <!-- FIREBASE -->
@@ -21,15 +23,13 @@
     <title>Post-It</title>
 
     <style>
+        }
 
-}
-
-
-      </style>
+    </style>
 </head>
 
 <body>
-    
+
     <!-- BACKGROUND SLIDESHOW -->
     <ul class="slideshow">
         <li><span>Image 01</span>
@@ -53,27 +53,27 @@
     </ul>
     <!--TOPIC AND NAVBAR-->
     <header class="blue-grey darken-4">
-      <div class="container header_container">
-          <!-- <a href='index.html'><h5 href="index.html">Home</h5></a> -->
-          <span id="view_number"></span>
-          <h4 id='topic_text'></h4>
-          <h4 id='timer_display'>1230</h4>   
-      </div>
+        <div class="container header_container">
+            <!-- <a href='index.html'><h5 href="index.html">Home</h5></a> -->
+            <span id="view_number"></span>
+            <h4 id='topic_text'></h4>
+            <h4 id='timer_display'>1230</h4>
+        </div>
     </header>
-    
+
     <!--POST DISPLAY AREA-->
 
     <div class="container">
 
 
-      
 
-    <div class="row justify-content-center" id="sorting_div">
-      
-      <span id="order_by_date">Order by Dates</span>
-      <span id="order_by_like">Order by likes</span>
-      <span id="order_by_dislike">Order by dislikes</span>
-    </div>
+
+        <div class="row justify-content-center" id="sorting_div">
+
+            <span id="order_by_date">Order by Dates</span>
+            <span id="order_by_like">Order by likes</span>
+            <span id="order_by_dislike">Order by dislikes</span>
+        </div>
 
 
         <div id="post_area" class="row">
@@ -81,15 +81,15 @@
     </div>
     <!--POST-IT BUTTON THAT OPENS UP MODAL      -->
     <button id="post-it_button" href="#modal1" class="btn-large waves-effect waves-light blue-grey darken-3 modal-trigger">Post-It</button>
-        <button class="btn-large waves-effect waves-light blue-grey darken-3" id="uncen_button">Uncensored</button>
+    <button class="btn-large waves-effect waves-light blue-grey darken-3" id="uncen_button">Uncensored</button>
     <!--SUBMIT MODAL-->
     <div id="modal1" class="modal">
         <div class="modal-content center-align">
             <h3>Post-It right up!</h3>
             <div class="row">
                 <div class="col s12">
-                    <div class="postit_big gradient_purple" >
-                        <textarea id='input_text' data-length='128'></textarea>
+                    <div class="postit_big gradient_purple">
+                        <textarea id='input_text' maxlength='95' data-length='95'></textarea>
                     </div>
                 </div>
                 <button id="submit_button" class="btn waves-effect waves-light modal-action modal-close blue-grey darken-2">Submit</button>
@@ -107,33 +107,61 @@
             <p id="topic_0"></p>
             <button class="topic_like" id="topic_0_like">+</button>
             <button id="topic_0_dislike" class="topic_dislike">-</button>
-            <p><span id="like_0">++</span><span id="dislike_0">--</span><p>
+            <p><span id="like_0">++</span><span id="dislike_0">--</span>
+                <p>
 
-            <p id="topic_1"></p>
-            <button class="topic_like" id="topic_1_like">+</button>
-            <button id="topic_1_dislike" class="topic_dislike">-</button>
-            <p><span id="like_1">++</span><span id="dislike_1">--</span><p>
+                    <p id="topic_1"></p>
+                    <button class="topic_like" id="topic_1_like">+</button>
+                    <button id="topic_1_dislike" class="topic_dislike">-</button>
+                    <p><span id="like_1">++</span><span id="dislike_1">--</span>
+                        <p>
 
-            <p id="topic_2"></p>
-            <button class="topic_like" id="topic_2_like">+</button>
-            <button id="topic_2_dislike" class="topic_dislike">-</button>
-            <p><span id="like_2">++</span><span id="dislike_2">--</span><p>
+                            <p id="topic_2"></p>
+                            <button class="topic_like" id="topic_2_like">+</button>
+                            <button id="topic_2_dislike" class="topic_dislike">-</button>
+                            <p><span id="like_2">++</span><span id="dislike_2">--</span>
+                                <p>
 
-            <p id="topic_3"></p>
-            <button class="topic_like" id="topic_3_like">+</button>
-            <button id="topic_3_dislike" class="topic_dislike">-</button>
-            <p><span id="like_3">++</span><span id="dislike_3">--</span><p>
+                                    <p id="topic_3"></p>
+                                    <button class="topic_like" id="topic_3_like">+</button>
+                                    <button id="topic_3_dislike" class="topic_dislike">-</button>
+                                    <p><span id="like_3">++</span><span id="dislike_3">--</span>
+                                        <p>
 
-            <p id="topic_4"></p>
-            <button class="topic_like" id="topic_4_like">+</button>
-            <button id="topic_4_dislike" class="topic_dislike">-</button>
-            <p><span id="like_4">++</span><span id="dislike_4">--</span><p>
-            
+                                            <p id="topic_4"></p>
+                                            <button class="topic_like" id="topic_4_like">+</button>
+                                            <button id="topic_4_dislike" class="topic_dislike">-</button>
+                                            <p><span id="like_4">++</span><span id="dislike_4">--</span>
+                                                <p>
 
 
-            
+
+
         </div>
     </ul>
+
+    <!--Instructions Button-->
+    <button id="instructions" href="#modal2" class="btn-large waves-effect waves-light blue-grey darken-3 modal-trigger">Instructions</button>
+    <!--Instructions Modal-->
+    <div id="modal2" class="modal">
+        <div class="modal-content center-align">
+            <h3>What's this about?</h3>
+            <div class="row">
+                <div class="col s12">
+                    <p.lead>This is a place where you can submit your opinions on hotly debated topics anonymously.</p>
+                   
+                   <p.lead>To voice your opinion on this page you just have to click on the big ol' Post-It button on the bottom left hand corner of the page.</p>
+                   
+                   <p.lead>You can also show your support of other posters' opinions on the page by clicking the green like or red dislike button on their respective Post-It.</p>
+                   
+                   <p.lead>You can even vote on the next topic by clicking the round button on the bottom right corner of the page, which will you bring you to a list of a whole host of new topics to be updated in the future.</p>
+                   
+                   <p.lead>This is your page. Have fun and don't be afraid to share your voice.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <!--JQUERY-->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.js"></script>
     <!--MATERIALIZE JS-->
@@ -141,4 +169,5 @@
     <!--CUSTOM JS  -->
     <script src="assets/js/app.js"></script>
 </body>
+
 </html>

@@ -4,6 +4,14 @@ p,
 h2 {
     font-family: 'Kalam', cursive;
 }
+
+#instructions {
+    position: fixed;
+    right: 20px;
+    bottom: 105px;
+}
+
+
 header {
     position: relative;
     top: 0;
