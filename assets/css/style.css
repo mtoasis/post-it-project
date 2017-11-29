@@ -20,6 +20,12 @@ header {
 
 }
 
+#instructions {
+    position: fixed;
+    right: 20px;
+    bottom: 105px;
+}
+
 
  #sorting_div{
     
