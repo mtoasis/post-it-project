@@ -378,7 +378,7 @@ function xmark(){
 		
 				var dislikes = childsnap.val().dislike
 
-				if (dislikes>7){
+				if (dislikes>10){
 					// console.log("working")
 					// console.log(target)
 					// $(target).css("display","block")
