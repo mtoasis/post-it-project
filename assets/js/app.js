@@ -217,14 +217,8 @@ var rotation_array = ["rotate_left","rotate_right",""];
 $(document).on("keyup", "#input_text", function(){
 	var text_count = $("#input_text").val().length;
 	console.log(text_count)
-<<<<<<< HEAD
-	if (text_count>=128){
-		$("#warning").text("You can't type more than 80 characters")
-=======
 	if (text_count>=95){
 		$("#warning").text("You can't type more than 95 characters")
->>>>>>> e58a721e166723aca036ecb377ad05094d5aeac6
-		$()
 	}
 	else{
 		$("#warning").text("Character count: "+text_count)
