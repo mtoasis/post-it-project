@@ -52,12 +52,20 @@
         </li>
     </ul>
     <!--TOPIC AND NAVBAR-->
-    <header class="blue-grey darken-4">
-      <div class="container header_container">
+
+
+
+
+    <header class="blue-grey darken-4" class="col s12">
+    
+        
+
+      <div class="container header_container" class="col s12">
+
+        <h1>Post-it</h1><div id="logo" class="col s12"><i class="pin"></i></div>
+
           <!-- <a href='index.html'><h5 href="index.html">Home</h5></a> -->
-          <span id="view_number"></span>
-          <h4 id='topic_text'></h4>
-          <h4 id='timer_display'>1230</h4>   
+            
       </div>
     </header>
     
@@ -66,9 +74,17 @@
     <div class="container">
 
 
+        <div class="blue-grey darken-4" id="menu" class="col s12">
+      
+            <span id="view_number"></span>
+          <h4 id='topic_text'></h4>
+          <h4 id='timer_display'>1230</h4> 
+    </div>
+
+
       
 
-    <div class="row justify-content-center" id="sorting_div">
+    <div class="row justify-content-center" id="sorting_div" class="col s12">
       
       <span id="order_by_date">Order by Dates</span>
       <span id="order_by_like">Order by likes</span>
@@ -107,33 +123,69 @@
             <p id="topic_0"></p>
             <button class="topic_like" id="topic_0_like">+</button>
             <button id="topic_0_dislike" class="topic_dislike">-</button>
-            <p><span id="like_0">++</span><span id="dislike_0">--</span><p>
+            <br>
+            <p><span class="topic_like_text" id="like_0">++</span><span class="topic_dislike_text" id="dislike_0">--</span></p>
+            <br>
 
             <p id="topic_1"></p>
             <button class="topic_like" id="topic_1_like">+</button>
             <button id="topic_1_dislike" class="topic_dislike">-</button>
-            <p><span id="like_1">++</span><span id="dislike_1">--</span><p>
+            <br>
+            <p><span class="topic_like_text" id="like_1">++</span><span class="topic_dislike_text" id="dislike_1">--</span>
+            </p>
+            <br>
 
             <p id="topic_2"></p>
             <button class="topic_like" id="topic_2_like">+</button>
             <button id="topic_2_dislike" class="topic_dislike">-</button>
-            <p><span id="like_2">++</span><span id="dislike_2">--</span><p>
+            <br>
+            <p><span class="topic_like_text" id="like_2">++</span><span class="topic_dislike_text" id="dislike_2">--</span>
+            </p>
+            <br>
 
             <p id="topic_3"></p>
             <button class="topic_like" id="topic_3_like">+</button>
             <button id="topic_3_dislike" class="topic_dislike">-</button>
-            <p><span id="like_3">++</span><span id="dislike_3">--</span><p>
+            <br>
+            <p><span class="topic_like_text" id="like_3">++</span><span class="topic_dislike_text" id="dislike_3">--</span>
+            </p>
+            <br>
 
             <p id="topic_4"></p>
             <button class="topic_like" id="topic_4_like">+</button>
             <button id="topic_4_dislike" class="topic_dislike">-</button>
-            <p><span id="like_4">++</span><span id="dislike_4">--</span><p>
+            <br>
+            <p><span class="topic_like_text" id="like_4">++</span><span class="topic_dislike_text" id="dislike_4">--</span>
+            </p>
+            <br>
             
 
 
             
         </div>
     </ul>
+
+
+    <button id="instructions" href="#modal2" class="btn-large waves-effect waves-light blue-grey darken-3 modal-trigger">Instructions</button>
+    <!--Instructions Modal-->
+    <div id="modal2" class="modal">
+        <div class="modal-content center-align">
+            <h3>What's this about?</h3>
+            <div class="row">
+                <div class="col s12">
+                    <p.lead>This is a place where you can submit your opinions on hotly debated topics anonymously.</p>
+                   
+                   <p.lead>To voice your opinion on this page you just have to click on the big ol' Post-It button on the bottom left hand corner of the page.</p>
+                   
+                   <p.lead>You can also show your support of other posters' opinions on the page by clicking the green like or red dislike button on their respective Post-It.</p>
+                   
+                   <p.lead>You can even vote on the next topic by clicking the round button on the bottom right corner of the page, which will you bring you to a list of a whole host of new topics to be updated in the future.</p>
+                   
+                   <p.lead>This is your page. Have fun and don't be afraid to share your voice.</p>
+                </div>
+            </div>
+        </div>
+    </div>
     <!--JQUERY-->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.js"></script>
     <!--MATERIALIZE JS-->
