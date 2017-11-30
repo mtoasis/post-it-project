@@ -11,12 +11,14 @@ var uncensored = false;
 $("#uncen_button").on("click",function(){
 	if (uncensored){
 		uncensored = false;
-		$(".xmark").css("display","block")
+		$("#uncen_button").text("Uncensored");
+		$(".xmark").css("display","block");
 		$("#uncen_button").css("background-color","green")
 	}
 	else if (!uncensored){
 	uncensored = true;
 	console.log(uncensored)
+	$("#uncen_button").text("Censored");
 	$("#uncen_button").css("background-color","red")
 	$(".xmark").css("display","none")
 }
@@ -215,7 +217,7 @@ var rotation_array = ["rotate_left","rotate_right",""];
 $(document).on("keyup", "#input_text", function(){
 	var text_count = $("#input_text").val().length;
 	console.log(text_count)
-	if (text_count>=80){
+	if (text_count>=128){
 		$("#warning").text("You can't type more than 80 characters")
 		$()
 	}
